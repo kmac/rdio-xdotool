@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# https://github.com/kmac/rdio-xdotool
+#
 # This simple script uses xdotool to control the rdio app.
 # It's best used for binding to global hotkeys. For example,
 # I use win-p for play/pause, win-[ for previous, and win-]
