@@ -21,7 +21,11 @@ elif [ "$1" = "previous" ]; then
   $XDOTOOL_SEARCH key --clearmodifiers bracketleft
 elif [ "$1" = "activate" ]; then
   $XDOTOOL_SEARCH windowactivate
+elif [ "$1" = "playlist" ]; then
+  $XDOTOOL_SEARCH windowactivate && $XDOTOOL_SEARCH key --clearmodifiers ctrl+u
+elif [ "$1" = "nowplaying" ]; then
+  $XDOTOOL_SEARCH getwindowname | sed "s/Rdio//"
 else
-  echo "Usage: $0 playpause|next|previous|activate"
+  echo "Usage: $0 playpause|next|previous|activate|playlist|nowplaying"
   exit 1
 fi
